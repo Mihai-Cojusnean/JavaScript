@@ -1,64 +1,176 @@
-function imagineChange(){
-	if (document.getElementById("myImg").src == "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990")
-	{
-		document.getElementById("myImg").src = "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PBSB,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990";
-	}
-	else
-	{
-		document.getElementById("myImg").src = "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990";
-	}
+let images = {
+	'light':  "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PBSB,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990",
+	'dark': "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990"
+};
+
+function setImageUrl(color) {
+	document.getElementById("myImg").src = images[color];
+}
+
+function suma() {
+	if document.getElementById("myImg").src = ;
+	suma += 100;
+}
+
+-----------------------------------naStyle
+.xyz {
+    background-size: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+}
+.btn-circle.btn-md {
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 12px;
+    text-align: center;
 }
 
 
+--------------------------------------------------- constructor
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
 
-    <title>Automobile disponibile</title>
-  </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">MasinaVirus-2020 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Vnedaroznicuri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sport car</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biciclete</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                    <a class="dropdown-item" href="#">Vnedarojnicuri</a>
+                    <a class="dropdown-item" href="#">Sport</a>
+                    <a class="dropdown-item" href="#">Cu smena perdaci</a>
+                </div>
+            </li>
+        </ul>
     </div>
-  </nav>
-    <h1>Ma?ine disponibile</h1>
+</nav>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <img  class="card-img-top"  id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" max-height="650">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Culoarea exterioara</h5>
+                <button type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-secondary btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-success btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-danger btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-warning btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-light btn-circle btn-sm" onclick="setImageUrl('dark')"></button>
+                <button type="button" class="btn btn-dark btn-circle btn-sm" onclick="setImageUrl('light')"></button>
+                <p class="card-text">Culoare -----> pret</p>
+                <h5 class="card-title">Selecta?i jantele</h5>
+                <h5 class="card-title">Selecta?i tipul motorului</h5>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Po Defaulu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Slab</button>
+                        <button class="dropdown-item" type="button">Normal</button>
+                        <button class="dropdown-item" type="button">Dibil</button>
+                    </div>
+                </div>
+                <h5 class="card-title">Viteza maxima -----> km/h</h5>
+                <a href="#" class="btn btn-primary">Cumpara</a>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="naStyle.css" />
+<script type="text/javascript" src="js/logica.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+----------------------------------------------------index
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">MasinaVirus-2020 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Vnedaroznicuri</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sport car</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biciclete</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown10">
+          <a class="dropdown-item" href="#">Vnedarojnicuri</a>
+          <a class="dropdown-item" href="#">Sport</a>
+          <a class="dropdown-item" href="#">Cu smena perdaci</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1 class="display-1 text-center">Automobile disponibile</h1>
 <div class="row row-cols-1 row-cols-md-6 mx-auto">
   <div class="col mb-4">
     <div class="card h-100">
@@ -108,25 +220,141 @@ function imagineChange(){
   <div class="col mb-4">
     <div class="card h-100">
       <button type="button" class="btn btn-dark" onclick="imagineChange();">Primary</button>
-      <img  class="card-img-top" id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" width="200" height="150">
+      <img  class="card-img-top"  id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" width="200" height="150">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="constructor.html" class="btn btn-primary btn-block stretched-link">Garaj</a>
       </div>
     </div>
   </div>
 </div>
-    <span class="badge badge-pill badge-primary">Primary</span>
-    <span class="badge badge-pill badge-secondary">Secondary</span>
-    <span class="badge badge-pill badge-success">Success</span>
-    <span class="badge badge-pill badge-danger">Danger</span>
-    <span class="badge badge-pill badge-warning">Warning</span>
-    <span class="badge badge-pill badge-info">Info</span>
-    <span class="badge badge-pill badge-light">Light</span>
-    <span class="badge badge-pill badge-dark">Dark</span>
+<link rel="stylesheet" type="text/css" href="naStyle.css" />
+<span class="badge badge-pill badge-primary">Primary</span>
+<span class="badge badge-pill badge-secondary">Secondary</span>
+<span class="badge badge-pill badge-success">Success</span>
+<span class="badge badge-pill badge-danger">Danger</span>
+<span class="badge badge-pill badge-warning">Warning</span>
+<span class="badge badge-pill badge-info">Info</span>
+<span class="badge badge-pill badge-light">Light</span>
+<span class="badge badge-pill badge-dark">Dark</span>
 <script type="text/javascript" src="js/logica.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+--------------------------------------------------------comanda
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">MasinaVirus-2020 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Vnedaroznicuri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sport car</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biciclete</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                    <a class="dropdown-item" href="#">Vnedarojnicuri</a>
+                    <a class="dropdown-item" href="#">Sport</a>
+                    <a class="dropdown-item" href="#">Cu smena perdaci</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h1 class="display-1 text-center">Automobile disponibile</h1>
+<div class="row row-cols-1 row-cols-md-6 mx-auto">
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src="https://i.redd.it/rwq6vil0n6041.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">CyberTruck</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card h-100">
+            <button type="button" class="btn btn-dark" onclick="imagineChange();">Primary</button>
+            <img  class="card-img-top" id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" width="200" height="150">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<span class="badge badge-pill badge-primary">Primary</span>
+<span class="badge badge-pill badge-secondary">Secondary</span>
+<span class="badge badge-pill badge-success">Success</span>
+<span class="badge badge-pill badge-danger">Danger</span>
+<span class="badge badge-pill badge-warning">Warning</span>
+<span class="badge badge-pill badge-info">Info</span>
+<span class="badge badge-pill badge-light">Light</span>
+<span class="badge badge-pill badge-dark">Dark</span>
+<script type="text/javascript" src="js/logica.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>
