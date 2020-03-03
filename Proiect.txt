@@ -1,16 +1,13 @@
 let images = {
 	'light':  "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PBSB,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990",
-	'dark': "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990"
+	'dark': "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990",
+	'blue': "img.1.png"
 };
 
 function setImageUrl(color) {
 	document.getElementById("myImg").src = images[color];
 }
 
-function suma() {
-	if document.getElementById("myImg").src = ;
-	suma += 100;
-}
 
 -----------------------------------naStyle
 .xyz {
@@ -96,7 +93,7 @@ function suma() {
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Culoarea exterioara</h5>
-                <button type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                <button type="button" class="btn btn-primary btn-circle btn-sm" onclick="setImageUrl('blue')"></button>
                 <button type="button" class="btn btn-secondary btn-circle btn-sm"></button>
                 <button type="button" class="btn btn-success btn-circle btn-sm"></button>
                 <button type="button" class="btn btn-danger btn-circle btn-sm"></button>
@@ -104,8 +101,8 @@ function suma() {
                 <button type="button" class="btn btn-light btn-circle btn-sm" onclick="setImageUrl('dark')"></button>
                 <button type="button" class="btn btn-dark btn-circle btn-sm" onclick="setImageUrl('light')"></button>
                 <p class="card-text">Culoare -----> pret</p>
-                <h5 class="card-title">Selecta?i jantele</h5>
-                <h5 class="card-title">Selecta?i tipul motorului</h5>
+                <h5 class="card-title">Selectați jantele</h5>
+                <h5 class="card-title">Selectați tipul motorului</h5>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Po Defaulu
@@ -118,6 +115,52 @@ function suma() {
                 </div>
                 <h5 class="card-title">Viteza maxima -----> km/h</h5>
                 <a href="#" class="btn btn-primary">Cumpara</a>
+                <script type="text/javascript">
+                    let masini = [
+                        {
+                            "marca": "Tesla",
+                            "culoare": ["https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PBSB,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990",
+                                "BMW", "Fiat"],
+                            "pret": 69696,
+                            "tipJantele": "",
+                            "tipMotor": "",
+                            "vitezaMax": 300
+                        },
+                        {
+                            "marca": "BMW",
+                            "culoare": "Va",
+                            "pret": 49996,
+                            "tipJantele": "",
+                            "tipMotor": "",
+                            "vitezaMax": 350
+                        },
+                        {
+                            "marca": "Mercedez S-class",
+                            "culoare": "Va",
+                            "pret": 800000,
+                            "tipJantele": "",
+                            "tipMotor": "",
+                            "vitezaMax": 350
+                        },
+                        {
+                            "marca": "Ford",
+                            "culoare": "Va",
+                            "pret": 30599,
+                            "tipJantele": "",
+                            "tipMotor": "",
+                            "vitezaMax": 200
+                        },
+                        {
+                            "marca": "Dacia",
+                            "culoare": "Va",
+                            "pret": 15000,
+                            "tipJantele": "",
+                            "tipMotor": "",
+                            "vitezaMax": 150
+                        }
+                    ];
+                    console.log(masini.marca);
+                </script>
             </div>
         </div>
     </div>
@@ -129,122 +172,6 @@ function suma() {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
-
-----------------------------------------------------index
-<!doctype html>
-<html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">MasinaVirus-2020 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Vnedaroznicuri</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sport car</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biciclete</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown10">
-          <a class="dropdown-item" href="#">Vnedarojnicuri</a>
-          <a class="dropdown-item" href="#">Sport</a>
-          <a class="dropdown-item" href="#">Cu smena perdaci</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-<h1 class="display-1 text-center">Automobile disponibile</h1>
-<div class="row row-cols-1 row-cols-md-6 mx-auto">
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="https://i.redd.it/rwq6vil0n6041.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">CyberTruck</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <button type="button" class="btn btn-dark" onclick="imagineChange();">Primary</button>
-      <img  class="card-img-top"  id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" width="200" height="150">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a href="constructor.html" class="btn btn-primary btn-block stretched-link">Garaj</a>
-      </div>
-    </div>
-  </div>
-</div>
-<link rel="stylesheet" type="text/css" href="naStyle.css" />
-<span class="badge badge-pill badge-primary">Primary</span>
-<span class="badge badge-pill badge-secondary">Secondary</span>
-<span class="badge badge-pill badge-success">Success</span>
-<span class="badge badge-pill badge-danger">Danger</span>
-<span class="badge badge-pill badge-warning">Warning</span>
-<span class="badge badge-pill badge-info">Info</span>
-<span class="badge badge-pill badge-light">Light</span>
-<span class="badge badge-pill badge-dark">Dark</span>
-<script type="text/javascript" src="js/logica.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-</html>
-
 
 --------------------------------------------------------comanda
 <!doctype html>
