@@ -3,12 +3,11 @@ console.log("Laboratorul Nr.1");
 number = [];
 numberCopy = [];
 function getInputValue() {
-    input = document.getElementById("myInput").value.split(',');
+    input = document.getElementById("myInput").value.split(',').filter((i)=> i < 10 && i > 0);
     for (i = 0; i < input.length; i++) {
         if (input[i] <= 10)
             number[i] = parseInt(input[i]);
-    }
-    console.log(number);
+    }  console.log(number);
 
     function renescenseNumber() {
         for (var i = 0; i < number.length; i++)
@@ -17,17 +16,16 @@ function getInputValue() {
 
     function min(){
         var min = number[0];
-        for (var i = 0; i < number.length; i++) {
+        for (var i = 1; i < number.length; i++) {
             if (number[i] <= min) {
                 min = number[i];
             }
-        }
-        console.log('Minimul este ---> ' + min);
+        } console.log('Minimul este ---> ' + min);
     } min();
 
     function max(){
         var max = number[0];
-        for (var i = 0; i < number.length; i++) {
+        for (var i = 1; i < number.length; i++) {
             if (number[i] >= max) {
                 max = number[i];
             }
@@ -46,14 +44,14 @@ function getInputValue() {
 
     function formaCrescatoare() {
         numberCopy.sort(function (a, b) {
-            return a - b
+            return a - b;
         })
         console.log('Tabel in forma crescatoare ---> ' + numberCopy);
     } formaCrescatoare();
 
     function formaDescrescatoare() {
         numberCopy.sort(function (a, b) {
-            return b - a
+            return b - a;
         })
         console.log('Tabel in forma descrescatoare ---> ' + numberCopy);
     } formaDescrescatoare();
@@ -70,79 +68,70 @@ function getInputValue() {
     numberCopy.push(17);
     console.log('Adaugarea numarului 17 ---> ' + numberCopy);
     numberCopy.splice(2, 1);
-    console.log('?tergerea unui element ---> ' + numberCopy);
+    console.log('Stergerea unui element ---> ' + numberCopy);
 
-    function note9_10() {
+    function note9_10(min, max) {
         var nr = 0;
         var total = 0;
-        var rez = 0;
+        var rezultat = 0;
         for (var i = 0; i <= number.length; i++){
             if (number[i] >= 9){
                 nr += 1;
                 total += number[i]
             }
-            rez = total/number.length;
-        }
-        console.log('In total sunt --> ' + nr + ' note de 9 ?i 10');
-        console.log('Calitata --> ' + rez);
+            rezultat = total/number.length;
+        } console.log('In total sunt --> ' + nr + ' note de 9 si 10');
+          console.log('Calitata --> ' + rezultat);
     } note9_10();
 
     function procentulReusitei() {
         var s = 0;
-        var rez = 0;
+        var rezultat = 0;
         for (var i = 0; i <= number.length; i++){
             if (number[i] >= 6){
                 s += number[i];
             }
-            rez = s/number.length;
-        }
-        console.log('Procentul reu?itei ---> ' + rez + '%');
+           
+        } 
+        rezultat = s/number.length;
+        console.log('Procentul reusitei ---> ' + rezultat + '%');
     } procentulReusitei();
+
 }
 
 function randoms() {
     var randoms = [...Array(9)].map(() => Math.floor(Math.random() * 10)+1);
     document.getElementById("myInput").value = randoms;
 }
-
-function imagineChange(){
-    if (document.getElementById("myImg").src == "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990")
-    {
-        document.getElementById("myImg").src = "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PBSB,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990";
-    }
-    else
-    {
-        document.getElementById("myImg").src = "https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990";
-    }
-}
-
-
-
 ====================================
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>	</title>
+    <title> </title>
 </head>
-<script src="app.js"></script>
 
 <body>
 <label for="myInput">Note</label><br>
-<input type="text"  id="myInput" onkeypress="isInputNumber(event);"><br>
+<p><input type="text"  id="myInput"  pattern="\d+(,\d{2})?" onkeypress="isInputNumber(event);"></p><br>
 <button type="button" onclick="getInputValue();">Set</button><br>
 <button type="button" onclick="randoms();">Random</button><br>
-
-<button type="button" onclick="imagineChange();">Random</button><br>
-<img id="myImg" src="https://static-assets.tesla.com/configurator/compositor?&options=$WTAS,$PPSW,$MTS03&view=STUD_3QTR_V2&model=ms&size=1441&bkba_opt=1&version=v0027d2020214789990&version=v0027d2020214789990" width="600" height="450">
 <script>
     function isInputNumber(evt) {
         var ch = String.fromCharCode(evt.which);
-        if (!/[0-9-,]/.test(ch)){
+        if (!/[0-9,]/.test(ch)){
             evt.preventDefault();
         }
     }
 </script>
-
+<script>
+    window.onload = function() {
+ const myInput = document.getElementById('myInput');
+ myInput.onpaste = function(e) {
+   e.preventDefault();
+ }
+}
+</script>
+<script type="text/javascript" src="js/logica.js"></script>
 </body>
 </html>
